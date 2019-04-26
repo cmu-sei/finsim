@@ -1,0 +1,88 @@
+Transaction_Server: 
+	id: 70000 
+	connection: 127.0.0.1 3500
+	database_Type: SQLSERVER
+	server-name: TRANS-DB
+	database_Name: Transactions
+	username: TransMonitor
+	password: tartans@@1
+
+Merchant: 
+	Target:
+		id: 70001 
+		connection: 127.0.0.1 4500 4501 
+		users: ./users.txt 
+		cert: ./ssl_cert/target.pem
+		key: ./ssl_cert/target_key.pem
+		log: ./Target_log.txt
+		location: 205.68.10.200
+		directory: /usr/share/finance/
+		packet: 10000
+		flow: .01
+	Walmart:
+		id: 70002 
+		connection: 127.0.0.1 5500 5501
+		users: ./users.txt 
+		cert: ./ssl_cert/walmart.pem
+		key: ./ssl_cert/walmart_key.pem
+		log: ./Walmart_log.txt
+		location: 205.68.10.201
+		directory: /usr/share/finance/
+		packet: 10000
+		flow: .01
+	Ikea:
+		id: 70003 
+		connection: 127.0.0.1 6500 6501 
+		users: ./users.txt 
+		cert: ./ssl_cert/ikea.pem
+		key: ./ssl_cert/ikea_key.pem
+		log: ./Ikea_log.txt
+		location: 205.68.10.202
+		directory: /usr/share/finance/
+		packet: 10000
+		flow: .01
+	Amazon:
+		id: 70004 
+		connection: 127.0.0.1 7500 7501
+		users: ./users.txt 
+		cert: ./ssl_cert/amazon.pem
+		key: ./ssl_cert/amazon_key.pem
+		log: ./Amazon_log.txt
+		location: 205.68.10.203
+		directory: /usr/share/finance/
+		packet: 10000
+		flow: .01
+
+Card_Companies:	
+	Amex: 
+		id: 50001 
+		connection: 127.0.0.1 8500 
+		card_Verification: and 34 37 
+		cert: ./ssl_cert/amex.pem
+		key: ./ssl_cert/amex_key.pem
+		log: ./Amex_log.txt
+	
+	Visa: 
+		id: 50002 
+		connection: 127.0.0.1 9500 
+		card_Verification: 4 
+		cert: ./ssl_cert/visa.pem
+		key: ./ssl_cert/visa_key.pem
+		log: ./Visa_log.txt
+	
+	Discover: 
+		id: 50003 
+		connection: 172.17.40.11 3505 
+		card_Verification: 6011 
+		cert: ./ssl_cert/discover.pem
+		key: ./ssl_cert/discover_key.pem
+		log: ./Discover_log.txt
+	
+	Master: 
+		id: 50004 
+		connection: 127.0.0.1 3506 
+		card_Verification: thru 51 56 
+		cert: ./ssl_cert/master.pem
+		key: ./ssl_cert/master_key.pem
+		log: ./Master_log.txt
+

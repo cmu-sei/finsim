@@ -1,0 +1,80 @@
+Transaction_Server: 
+	id: 70000 
+	connection: 172.17.40.11 3500
+	database_Type: SQLSERVER
+	server-name: TRANS-DB
+	database_Name: TransactionServer
+	username: TransMonitor
+	password: tartans@1
+
+Merchant: 
+	Target:
+		id: 70001 
+		connection: 23.63.227.179 3500 3501 
+		users: ./users.txt 
+		cert: ./ssl_cert/target.pem
+		key: ./ssl_cert/target_key.pem
+		log: ./Target_log.txt
+		packet: 20000000
+		flow: 20
+	Walmart:
+		id: 70002 
+		connection: 161.170.244.20 3500 3501
+		users: ./users.txt 
+		cert: ./ssl_cert/walmart.pem
+		key: ./ssl_cert/walmart_key.pem
+		log: ./Walmart_log.txt
+		packet: 20000000
+		flow: 20
+	Ikea:
+		id: 70003 
+		connection: 69.58.186.114 3500 3501 
+		users: ./users.txt 
+		cert: ./ssl_cert/ikea.pem
+		key: ./ssl_cert/ikea_key.pem
+		log: ./Ikea_log.txt
+		packet: 20000000
+		flow: 20
+	Amazon:
+		id: 70004 
+		connection: 54.239.17.6 3500 3501
+		users: ./users.txt 
+		cert: ./ssl_cert/amazon.pem
+		key: ./ssl_cert/amazon_key.pem
+		log: ./Amazon_log.txt
+		packet: 20000000
+		flow: 20
+
+Card_Companies:	
+	Amex: 
+		id: 50001 
+		connection: 104.16.134.18 3500
+		card_Verification: and 34 37 
+		cert: ./ssl_cert/amex.pem
+		key: ./ssl_cert/amex_key.pem
+		log: ./Amex_log.txt
+	
+	Visa: 
+		id: 50002 
+		connection: 23.197.25.100 3500
+		card_Verification: 4 
+		cert: ./ssl_cert/visa.pem
+		key: ./ssl_cert/visa_key.pem
+		log: ./Visa_log.txt
+	
+	Discover: 
+		id: 50003 
+		connection: 23.35.19.134 3500
+		card_Verification: 6011 
+		cert: ./ssl_cert/discover.pem
+		key: ./ssl_cert/discover_key.pem
+		log: ./Discover_log.txt
+	
+	Master: 
+		id: 50004 
+		connection: 216.119.209.64 3500 
+		card_Verification: thru 51 56 
+		cert: ./ssl_cert/master.pem
+		key: ./ssl_cert/master_key.pem
+		log: ./Master_log.txt
+

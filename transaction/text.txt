@@ -1,0 +1,23 @@
+{'merchant': {'Ikea': {'log': './Ikea_log.txt', 'flow': '.1', 'connection': ['172.17.40.11', '6500', '6501'], 'packet': '1000', 'cert': './ssl_cert/ikea.pem', 'location': '205.68.10.202', 'key': './ssl_cert/ikea_key.pem', 'directory': '/usr/share/finance/', 'id': '70003', 'users': './users.txt'}, 'Walmart': {'log': './Walmart_log.txt', 'flow': '.1', 'connection': ['172.17.40.11', '5500', '5501'], 'packet': '1000', 'cert': './ssl_cert/walmart.pem', 'location': '205.68.10.201', 'key': './ssl_cert/walmart_key.pem', 'directory': '/usr/share/finance/', 'id': '70002', 'users': './users.txt'}, 'Target': {'log': './Target_log.txt', 'flow': '.1', 'connection': ['172.17.40.11', '4500', '4501'], 'packet': '1000', 'cert': './ssl_cert/target.pem', 'location': '205.68.10.200', 'key': './ssl_cert/target_key.pem', 'directory': '/usr/share/finance/', 'id': '70001', 'users': './users.txt'}, 'Amazon': {'log': './Amazon_log.txt', 'flow': '.1', 'connection': ['172.17.40.11', '7500', '7501'], 'packet': '1000', 'cert': './ssl_cert/amazon.pem', 'location': '205.68.10.203', 'key': './ssl_cert/amazon_key.pem', 'directory': '/usr/share/finance/', 'id': '70004', 'users': './users.txt'}}, 'card_co': {'Amex': {'log': './Amex_log.txt', 'connection': ['172.17.40.11', '8500'], 'cert': './ssl_cert/amex.pem', 'card_Verification': ['and', '34', '37'], 'key': './ssl_cert/amex_key.pem', 'id': '50001'}, 'Visa': {'log': './Visa_log.txt', 'connection': ['172.17.40.11', '9500'], 'cert': './ssl_cert/visa.pem', 'card_Verification': '4', 'key': './ssl_cert/visa_key.pem', 'id': '50002'}, 'Master': {'log': './Master_log.txt', 'connection': ['172.17.40.11', '3506'], 'cert': './ssl_cert/master.pem', 'card_Verification': ['thru', '51', '56'], 'key': './ssl_cert/master_key.pem', 'id': '50004'}, 'Discover': {'log': './Discover_log.txt', 'connection': ['172.17.40.11', '3505'], 'cert': './ssl_cert/discover.pem', 'card_Verification': '6011', 'key': './ssl_cert/discover_key.pem', 'id': '50003'}}, 'server': {'username': 'TransMonitor', 'server-name': 'TRANS-DB', 'database_Name': 'Transactions', 'database_Type': 'SQLSERVER', 'connection': ['172.17.40.11', '3500'], 'password': 'tartans@@1', 'id': '70000'}}
+Here 4 : Merchants
+[u'ID', u'Name', u'Address', u'Transactions', u'Approved', u'Denied', u'Balance', u'ContactInfo']
+Here 4 : Requests
+[u'FirstName', u'LastName', u'MiddleIntial', u'Address', u'City', u'State', u'ZipCode', u'CardNumber', u'ExpDate', u'Invoice', u'AVS', u'AuthType', u'PrimaryAmount', u'SecondaryAmount', u'CVV2']
+Here 4 : TransRecord
+[u'Invoice', u'Confirmation', u'ResponseCode']
+Here 4 : Finance
+[u'ID', u'Name', u'Address', u'Transactions', u'Approved', u'Denied', u'Balance', u'ContactInfo']
+Master
+Visa
+Amex
+Discover
+Client Sever Issue: 'name'
+Name: Master Issue: [Errno 10054] An existing connection was forcibly closed by the remote hostName: Discover Issue: [Errno 10054] An existing connection was forcibly closed by the remote host
+
+----------------------------------------
+Exception happened during processing of request from ('172.17.40.11', 9500)
+----------------------------------------
+Client Sever Issue: 'name'
+----------------------------------------
+Exception happened during processing of request from ('172.17.40.11', 8500)
+----------------------------------------

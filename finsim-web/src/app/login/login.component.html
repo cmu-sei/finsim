@@ -1,0 +1,30 @@
+<!--
+  FinSim
+  Copyright 2018 Carnegie Mellon University. All Rights Reserved.
+  NO WARRANTY. THIS CARNEGIE MELLON UNIVERSITY AND SOFTWARE ENGINEERING INSTITUTE MATERIAL IS FURNISHED ON AN "AS-IS" BASIS. CARNEGIE MELLON UNIVERSITY MAKES NO WARRANTIES OF ANY KIND, EITHER EXPRESSED OR IMPLIED, AS TO ANY MATTER INCLUDING, BUT NOT LIMITED TO, WARRANTY OF FITNESS FOR PURPOSE OR MERCHANTABILITY, EXCLUSIVITY, OR RESULTS OBTAINED FROM USE OF THE MATERIAL. CARNEGIE MELLON UNIVERSITY DOES NOT MAKE ANY WARRANTY OF ANY KIND WITH RESPECT TO FREEDOM FROM PATENT, TRADEMARK, OR COPYRIGHT INFRINGEMENT.
+  Released under a MIT (SEI)-style license, please see license.txt or contact permission@sei.cmu.edu for full terms.
+-->
+
+<div class="signin-content">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p>Please log in.</p>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Username" formControlName="username" required>
+          <mat-error *ngIf="isFieldInvalid('username')">
+            Please enter your username.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <mat-error *ngIf="isFieldInvalid('password')">
+            Please enter your password.
+          </mat-error>
+        </mat-form-field>
+        <button mat-flat-button color="primary">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

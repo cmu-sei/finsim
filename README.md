@@ -8,7 +8,7 @@ Released under a MIT (SEI)-style license, please see license.txt or contact perm
 
 # Financial Simulator
 
-## v2.0, Updated AO 29 May 2019
+## v2.0, Updated AO 18 June 2019
 
 ## Brief:
 - Simulates a financial system
@@ -32,8 +32,8 @@ Released under a MIT (SEI)-style license, please see license.txt or contact perm
         - `grant all privileges on cc.* to cc@localhost; grant all privileges on trans.* to trans@localhost;`
         - `set sql_mode = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';`
 - Download nodejs and npm
-- npm install -g @angular/cli
-- ng add @angular/material
+- npm install
+    - **Make sure to run this within the /finsim-web directory where package.json is**
 
 ## Description:
 
@@ -44,8 +44,9 @@ Released under a MIT (SEI)-style license, please see license.txt or contact perm
 - ubuntu0.18.04.1
 - flask-restful flask-jwt-extended flask-sqlalchemy flask_cors
 - Apache and WSGI
-- NodeJs v8.10.0
-- npm v3.5.2
+- NodeJs v12.3.1
+- npm v6.9.0
+- Angular v6.1.10
 - Angular CLI 6.0.8
 - *See additional dependencies for FinSim-web in /finsim-web/packages.json*
 
@@ -90,6 +91,9 @@ Released under a MIT (SEI)-style license, please see license.txt or contact perm
 
 
 ## Changelog:
+
+### June:
+- Fixed rxjs compilation issue and added another dependency for finsim-web into `/finsim-web/package.json`
 
 ### May:
 - Restructured project structure

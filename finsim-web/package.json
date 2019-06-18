@@ -22,9 +22,10 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@auth0/angular-jwt": "^2.1.0",
     "core-js": "^2.5.4",
     "jwt-decode": "^2.2.0",
-    "rxjs": "^6.0.0",
+    "rxjs": "6.3.3",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
